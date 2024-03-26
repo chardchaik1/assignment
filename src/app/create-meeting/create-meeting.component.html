@@ -1,0 +1,22 @@
+<!-- create-meeting.component.html -->
+<form #meetingForm="ngForm" (ngSubmit)="onCreateMeeting(meetingForm)">
+    <mat-form-field appearance="fill">
+      <mat-label>Enter Meeting Topic</mat-label>
+      <input matInput type="text" name="topic" ngModel required>
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill">
+      <mat-label>Enter Number of People</mat-label>
+      <input matInput type="number" name="numberOfPeople" ngModel required>
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill">
+      <mat-label>Choose a Date</mat-label>
+      <input matInput [matDatepicker]="picker" placeholder="Start Time" name="startTime" ngModel required>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    
+    <button mat-raised-button color="primary" type="submit">Create Meeting Schedule</button>
+  </form>
+  

@@ -1,0 +1,12 @@
+<!-- create-client.component.html -->
+<div class="form-container">
+    <form #clientForm="ngForm" (ngSubmit)="onRegister(clientForm)">
+      <h2 class="form-heading">Create a Client</h2>
+      <input type="text" name="name" ngModel required placeholder="Enter Name"><br>
+      <input type="email" name="email" ngModel required placeholder="Enter Email"><br>
+      <input type="text" name="address" ngModel required placeholder="Enter Address"><br>
+      <input type="password" name="password" ngModel required placeholder="Enter Password"><br>
+      <button type="submit">Register</button>
+    </form>
+  </div>
+  
